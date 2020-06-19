@@ -59,6 +59,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (account == null) {
             Toast toast = Toast.makeText(MainActivity.this, "User not Signed in", Toast.LENGTH_SHORT);
             toast.show();
+        }else{
+            Intent intent = new Intent(MainActivity.this,NewActivity.class);
+            startActivity(intent);
         }
     }
 
@@ -102,4 +105,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             updateUI(null);
         }
     }
+
 }
